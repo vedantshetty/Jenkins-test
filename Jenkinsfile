@@ -1,12 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      image 'ruby' 
-      } 
-  }
+  agent any  
   stages {
     stage('build') {
       steps {
+        echo 'Building...'
         sh 'ruby --version'
       }
     }
